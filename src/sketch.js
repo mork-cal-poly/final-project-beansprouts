@@ -4,7 +4,10 @@ shellclick=false,
 finclick=false, 
 donutclick=false, 
 coconutclick=false,
-starclick= false
+starclick= false,
+arrowclick =false
+let scene=0;
+
 function preload() {
   textbox = loadImage('src/text.png');
   sky = loadImage('src/sky.png');
@@ -20,6 +23,17 @@ function preload() {
   starfish = loadImage('src/starfish.png');
   pawprint = loadImage('src/pawprint.png')
   arrow = loadImage('src/arrow.png');
+  // SCENE 3 IMAGES BELOW
+  beachScene3=loadImage ('src/backgroundScene3.png');
+  palmtreeScene3=loadImage ('src/PalmTreeScene3.png');
+  towelScene3=loadImage ('src/TowelScene3.png');
+  textboxScene3=loadImage ('src/TextBoxScene3.png');
+  pawprintsScene3=loadImage ('src/PawPrintsScene3.png');
+  drinkScene3=loadImage ('src/DrinkScene3.png'); 
+  pixelSunglasses=loadImage ('src/PixelSunglasses.png');
+  wingGlasses=loadImage ('src/WingGlasses.png');
+  lipGlasses=loadImage ('src/LipGlasses.png');
+  divaGlasses=loadImage ('src/DivaGlasses.png');
 }
 function setup() {
   // For ordering nodes in the DOM
@@ -30,6 +44,9 @@ function setup() {
 function draw() {
   background(220);
 scene2();
+
+backgroundScene3();
+  sunglasses();
   
   }
 
@@ -72,7 +89,29 @@ function scene2(){
   image(pawprint, 80,0,400,400)
   image(arrow, 0, 0, 400, 400)
   }
+  if (arrowclick == true){
+    scene++;
+  }
 }
+
+// SCENE 3 BELOW 
+
+function backgroundScene3(){
+  image(beachScene3, 0, 0);
+  image(palmtreeScene3, 0, 0);
+  image(towelScene3, 0, 0);
+  image(textboxScene3, 0, 0);
+  image(pawprintsScene3, 0, 0);
+  image(drinkScene3, 0, 0);
+}
+
+function sunglasses(){
+  image(pixelSunglasses, 130, 210);
+
+}
+
+
+
 function mouseClicked(){
   //octo bounding box
   if (mouseX < 300 && 
@@ -110,6 +149,11 @@ function mouseClicked(){
       mouseY < 220 && 
       mouseY > 190 )
   finclick = true
+  // arrow
+  if (mouseX < 300 &&
+    mouseX > 203 &&
+    mouseY < 380 &&
+    mouseY > 348)
+    arrowclick = true
   
 }   
-
