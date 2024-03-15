@@ -1,5 +1,5 @@
 //let timer = 0;
-let sky,xmark, shell, octo, palm, coconut, starfish, textbox, sun, sharkfin, donut, sand, octoclicked=false, 
+let ready, sky, xmark, shell, octo, palm, coconut, starfish, textbox, sun, sharkfin, donut, sand, octoclicked=false, 
 shellclick=false, 
 finclick=false, 
 donutclick=false, 
@@ -34,6 +34,7 @@ function preload() {
   wingGlasses=loadImage ('src/WingGlasses.png');
   lipGlasses=loadImage ('src/LipGlasses.png');
   divaGlasses=loadImage ('src/DivaGlasses.png');
+  ready = loadImage('assets/finalproject_scene1.png');
 }
 function setup() {
   // For ordering nodes in the DOM
@@ -43,11 +44,24 @@ function setup() {
 
 function draw() {
   background(220);
+  //scene 0 --> 1
+  if (scene == 0){
+    drawScene0();
+  } else if (scene == 1) {
+    drawScene1();
+  }
+  //scene 1
 scene2();
 
 backgroundScene3();
   sunglasses();
   
+  }
+  function drawScene0() {
+    background(255);
+    image(ready, 0, 0, 400, 400);
+  
+    describe('game ready screen titled "Find Spot, ready?, click here to start"');
   }
 
   // if (timer > 60 && timer < 100) {
@@ -113,6 +127,15 @@ function sunglasses(){
 
 
 function mouseClicked(){
+  //scene 0 --> scene 1
+  if (scene == 0 &&
+     mouseX > 105 &&
+     mouseX < 380 &&
+     mouseY > 285 &&
+      mouseY < 348) {
+    scene = 1;
+  }
+
   //octo bounding box
   if (mouseX < 300 && 
       mouseX > 230 && 
