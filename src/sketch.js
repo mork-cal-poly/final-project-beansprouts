@@ -1,11 +1,12 @@
 //let timer = 0;
-let ready, sky, xmark, shell, octo, palm, coconut, starfish, textbox, sun, sharkfin, donut, sand, octoclicked=false, 
+let sky, xmark, shell, octo, palm, coconut, starfish, textbox, sun, sharkfin, donut, sand, octoclicked=false, 
 shellclick=false, 
 finclick=false, 
 donutclick=false, 
 coconutclick=false,
 starclick= false,
 arrowclick =false
+let ready
 let scene=0;
 
 function preload() {
@@ -23,7 +24,7 @@ function preload() {
   starfish = loadImage('src/starfish.png');
   pawprint = loadImage('src/pawprint.png')
   arrow = loadImage('src/arrow.png');
-  // SCENE 3 IMAGES BELOW
+  // SCENE 2 IMAGES BELOW
   beachScene2=loadImage ('src/backgroundScene3.png');
   palmtreeScene2=loadImage ('src/PalmTreeScene3.png');
   towelScene2=loadImage ('src/TowelScene3.png');
