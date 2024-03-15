@@ -24,12 +24,12 @@ function preload() {
   pawprint = loadImage('src/pawprint.png')
   arrow = loadImage('src/arrow.png');
   // SCENE 3 IMAGES BELOW
-  beachScene3=loadImage ('src/backgroundScene3.png');
-  palmtreeScene3=loadImage ('src/PalmTreeScene3.png');
-  towelScene3=loadImage ('src/TowelScene3.png');
-  textboxScene3=loadImage ('src/TextBoxScene3.png');
-  pawprintsScene3=loadImage ('src/PawPrintsScene3.png');
-  drinkScene3=loadImage ('src/DrinkScene3.png'); 
+  beachScene2=loadImage ('src/backgroundScene3.png');
+  palmtreeScene2=loadImage ('src/PalmTreeScene3.png');
+  towelScene2=loadImage ('src/TowelScene3.png');
+  textboxScene2=loadImage ('src/TextBoxScene3.png');
+  pawprintsScene2=loadImage ('src/PawPrintsScene3.png');
+  drinkScene2=loadImage ('src/DrinkScene3.png'); 
   pixelSunglasses=loadImage ('src/PixelSunglasses.png');
   wingGlasses=loadImage ('src/WingGlasses.png');
   lipGlasses=loadImage ('src/LipGlasses.png');
@@ -51,9 +51,9 @@ function draw() {
     drawScene1();
   }
   //scene 1
-scene2();
+scene1();
 
-backgroundScene3();
+backgroundScene2();
   sunglasses();
   
   }
@@ -70,7 +70,7 @@ backgroundScene3();
   // timer++;
 
 
-function scene2(){
+function scene1(){
   image(sky,0,0,400,200);
   image (sun, 0, 0, 400, 400);
   image(sand, 0, 0, 400, 400);
@@ -108,15 +108,15 @@ function scene2(){
   }
 }
 
-// SCENE 3 BELOW 
+// SCENE 2 BELOW 
 
-function backgroundScene3(){
-  image(beachScene3, 0, 0);
-  image(palmtreeScene3, 0, 0);
-  image(towelScene3, 0, 0);
-  image(textboxScene3, 0, 0);
-  image(pawprintsScene3, 0, 0);
-  image(drinkScene3, 0, 0);
+function backgroundScene2(){
+  image(beachScene2, 0, 0);
+  image(palmtreeScene2, 0, 0);
+  image(towelScene2, 0, 0);
+  image(textboxScene2, 0, 0);
+  image(pawprintsScene2, 0, 0);
+  image(drinkScene2, 0, 0);
 }
 
 function sunglasses(){
