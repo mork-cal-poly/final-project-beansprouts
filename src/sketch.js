@@ -185,7 +185,7 @@ function drawScene2(){
   image(towelScene2, 0, 0, 400, 400);
   image(textboxScene2, 0, 0, 400, 400);
   image(pawprintsScene2, 0, 0, 400, 400);
-  image(drinkScene2, -50, 0, 400, 400);
+  image(drinkScene2, 144, 18, 400, 400);
 
   
   // dog movement & rotation
@@ -194,7 +194,7 @@ function drawScene2(){
       dogRotate = dogRotate - 0.1
     } else if (dogbodyClick == false) {
       drawDog(dogX, 250, -PI/30);
-    dogX = dogX + 20;
+    dogX = dogX + 2;
       if (dogX > 150){
       dogX=150;
     } else if (pixelY == 187 && dogbodyClick ==true){
@@ -210,7 +210,7 @@ function drawScene2(){
   // sunglasses movement 
   if (dogheadClick == true){
     image(pixelSunglasses, 35, pixelY, 400, 400);
-        pixelY = pixelY +5;
+        pixelY = pixelY +2;
     if (pixelY > 187){
       pixelY=187;
     }
