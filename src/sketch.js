@@ -47,11 +47,11 @@ function preload() {
 function setup() {
   // For ordering nodes in the DOM
   let myCanvas = createCanvas(400, 400);
-  // myCanvas.parent("canvas-parent");
+  myCanvas.parent("canvas-parent");
 }
 
 function draw() {
-  //scene 0 --> 1 ----> 2
+  //scene 0 --> 1 --> 2
   if (scene == 0){
       drawScene0();
   }else if (scene == 1) {
